@@ -2,7 +2,7 @@
 
 ## Goal
 
-* Build A Spring Boot 2 micro service that exposes a REST API on the root and return a 
+* Build A Spring Boot 2.4.x micro service that exposes a REST API on the root and return a 
 Fortune Cookie message (String) and deploy it to Cloud Foundry.
 * Learn about the functionality of the CF CLI.
 * Learn about the functionality of the Apps Manager.
@@ -10,7 +10,7 @@ Fortune Cookie message (String) and deploy it to Cloud Foundry.
 ## Steps
 
 * Go to [https://start.spring.io](https://start.spring.io) to create a project with Spring Initializr (Start with Spring Boot 2.2.6)
-* Create a (Maven) Spring Boot 2 project with starters `Web` and `Actuator`
+* Create a (Maven) Spring Boot 2.4.x project with starters `Web` and `Actuator`
 * Use 'workshop-fortune-service' for the artifact id
 * Use the latest and greatest GA release of Spring Boot
 * Download the project and open it in your favourite IDE

@@ -10,14 +10,14 @@ Add to your `pom.xml`:
 			<dependency>
 				<groupId>io.pivotal.spring.cloud</groupId>
 				<artifactId>spring-cloud-services-dependencies</artifactId>
-				<version>2.2.3.RELEASE</version>
+				<version>2.4.1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Hoxton.SR3</version>
+				<version>2020.0.4</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -87,7 +87,7 @@ spring:
 * Provision a config server in Cloud Foundry
 
 ```bash
-cf create-service p.config-server standard workshop-config-server -c '{"git": { "uri": "https://github.com/NLxAROSA/cnd-on-tas-101-workshop.git", "searchPaths": "configuration" } }'
+cf create-service p.config-server standard workshop-config-server -c '{"git": { "uri": "https://github.com/dcaron/cnd-on-tas-101-workshop.git", "searchPaths": "configuration" } }'
 ```
 
 * Provision a database in Cloud Foundry

@@ -38,23 +38,23 @@
 		<dependency>
 			<groupId>io.github.resilience4j</groupId>
 			<artifactId>resilience4j-circuitbreaker</artifactId>
-			<version>1.1.0</version>
+			<version>1.7.1</version>
 		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>io.pivotal.spring.cloud</groupId>
-				<artifactId>spring-cloud-services-dependencies</artifactId>
-				<version>2.2.3.RELEASE</version>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Hoxton.SR3</version>
+				<groupId>io.pivotal.spring.cloud</groupId>
+				<artifactId>spring-cloud-services-dependencies</artifactId>
+				<version>${spring-cloud-services.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

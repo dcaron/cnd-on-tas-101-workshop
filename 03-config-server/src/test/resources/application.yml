@@ -1,0 +1,8 @@
+spring:
+  activate:
+    on-profile: local
+  jpa:
+    generate-ddl: true
+  cloud:
+    config:
+      enabled: false
