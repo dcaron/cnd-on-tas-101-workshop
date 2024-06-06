@@ -2,6 +2,7 @@ package io.pivotal.workshops.cnd.fortuneui;
 
 import java.time.Duration;
 
+import io.github.resilience4j.core.functions.CheckedSupplier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -9,8 +10,6 @@ import org.springframework.web.client.RestTemplate;
 
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
-import io.vavr.CheckedFunction0;
-import io.vavr.control.Try;
 
 @Component
 public class FortuneService {
@@ -36,10 +35,13 @@ public class FortuneService {
   }
 
   public String getFortune() {
-    CheckedFunction0<String> someServiceCall = CircuitBreaker.decorateCheckedSupplier(circuitBreaker,
+    CheckedSupplier<String> someServiceCall = CircuitBreaker.decorateCheckedSupplier(circuitBreaker,
         () -> this.remoteFortune());
-    Try<String> result = Try.of(someServiceCall).recover((throwable) -> this.defaultFortune());
-    return result.get();
+    try {
+      return someServiceCall.get();
+    } catch (Throwable e) {
+      return this.defaultFortune();
+    }
   }
 
   private String remoteFortune() {
