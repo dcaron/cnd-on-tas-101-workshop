@@ -73,7 +73,7 @@ management:
         include: "*"
 ```
 
-* Configure the JPA to use the MySQL55Dialect and generate the table at startup
+* Configure the JPA to use the MySQLDialect and generate the table at startup
 
 ```yml
 spring:
@@ -81,7 +81,7 @@ spring:
     generate-ddl: true
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL55Dialect
+        dialect: org.hibernate.dialect.MySQLDialect
 ```
 
 * Provision a config server in Cloud Foundry

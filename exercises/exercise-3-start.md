@@ -33,7 +33,7 @@ cf create-service p.config-server standard workshop-config-server -c '{"git": { 
 ```
 
 * Disable security for now by adding a `SecurityConfig` and expose the actuator management endpoints (don't do this in production! Have proper endpoint authentication and authorization there unless your API is completely public)
-* Configure JPA `spring.jpa` to use the `org.hibernate.dialect.MySQL55Dialect` in the newly created `application.yml` file in the `configuration` folder and make sure the table to store the fortune texts in is created at startup of the application 
+* Configure JPA `spring.jpa` to use the `org.hibernate.dialect.MySQLDialect` in the newly created `application.yml` file in the `configuration` folder and make sure the table to store the fortune texts in is created at startup of the application 
 * Bind the services to your application by adding services instances `workshop-db` and `workshop-config-server' to the `manifest.yml`. 
 * Run your application locally (Note for local development we still run H2 and don't use the config server)
 * If the application is working fine push the updated version of your application to Cloud Foundry
