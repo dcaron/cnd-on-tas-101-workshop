@@ -15,7 +15,7 @@ We expect you to have with you:
 
 We expect you to have installed:
 
-* [JDK11 or higher](https://adoptopenjdk.net/?variant=openjdk11&jvmVariant=hotspot)
+* [JDK21 or higher, SDKman is the esiest way to download, manage and switch JDKs](https://sdkman.io/usage)
 * [Cloud Foundry CLI](https://docs.run.pivotal.io/cf-cli/install-go-cli.html)
 * An IDE of your choice, e.g. [vscode](https://code.visualstudio.com/), [idea](https://www.jetbrains.com/idea/), [eclipse](https://www.eclipse.org/eclipseide/) or [netbeans](https://netbeans.org/features/). 
 
